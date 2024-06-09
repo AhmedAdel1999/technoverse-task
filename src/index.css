@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow:0 0 0 50px #fcfcfc inset;
+    -webkit-text-fill-color: #000;
+    font-size:13px
+}
+
+@layer components{
+
+  .cartCount{
+    @apply bg-mainColor absolute left-4 -top-[12px] text-white text-[12px] flex items-center justify-center w-5 h-5 p-[2px] rounded-[50%]
+  }
+  .iconstyle{
+    @apply text-darkerText text-xl cursor-pointer
+  }
+  .headerStyle{
+    @apply text-darkerText font-bold xs:text-2xl xs:max-w-[auto] xs:text-center md:text-4xl md:max-w-[400px] md:text-left
+  }
+
+  .btnStyle{
+    @apply transition duration-500 border-mainColor border-[1px] outline-none rounded-md px-4 py-2 bg-mainColor text-white
+  }
+
+  .inputStyle{
+    @apply bg-inherit px-3 py-2 outline-none border-[2px] rounded-[7px] border-[#bebdbd] placeholder:text-[#bebdbd] placeholder:text-[13px]
+  }
+  .productStyle{
+    @apply border-[1px] border-ligthbgColor rounded xs:col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 flex flex-col gap-3 max-w-[400px] w-full items-center p-6
+  }
+  
+}
+
+::-webkit-scrollbar{
+  height: 7px;
+  width:7px;
+  display: block;
+}
+
+::-webkit-scrollbar-track{
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #df2020;
+  border-radius: 5px;
+}
+
